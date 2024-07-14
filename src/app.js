@@ -57,6 +57,8 @@ app.post("/upload", upload.single("audio"), (req, res) => {
   });
 
   blobStream.end(req.file.buffer);
+
+  res.send("true");
 });
 
 app.post("/transcribe", async (req, res) => {
